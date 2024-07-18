@@ -65,13 +65,13 @@ export default function Dashboard() {
             const response = await fetch('https://bootcamp-wine.vercel.app/api/v1/updateuser', {
 
                 method: 'PATCH',
-                // body: formData,
+                body: formData,
                 headers: {
-                    'Content-Type': 'application/json',
+                    // 'Content-Type': 'application/json',
                       'Authorization': `Bearer ${sessionStorage.getItem("token")}`,
                       
                 },
-                body:JSON.stringify(formData)
+                // body:JSON.stringify(formData)
             });
 
             // if (!response.ok) {
