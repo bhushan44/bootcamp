@@ -38,11 +38,8 @@ export default function TourOverView() {
   useEffect(
     function () {
       async function request() {
-<<<<<<< HEAD
-        const res = await fetch(`http://localhost:5000/api/v1/tours/${id}`);
-=======
         const res = await fetch(`https://bootcamp-wine.vercel.app/api/v1/tours/${id}`);
->>>>>>> 7278900 (fro)
+
         // console.log(await res.json())
         const result = await res.json();
         console.log(result.data.duration,"dur");
@@ -87,11 +84,9 @@ export default function TourOverView() {
         "Content-Type":"application/json",
         "Authorization":`Bearer ${sessionStorage.getItem("token")}`
     }
-<<<<<<< HEAD
-    const response = await fetch(`http://localhost:5000/api/v1/bookings/checkout-session/${params.id}`,{
-=======
+
     const response = await fetch(`https://bootcamp-wine.vercel.app/api/v1/bookings/checkout-session/${params.id}`,{
->>>>>>> 7278900 (fro)
+
         method:"GET",
         headers:headers,
         // body:JSON.stringify(body)
@@ -121,11 +116,9 @@ export default function TourOverView() {
             <div className=" overview-image flex justify-center items-center relative">
               {/* <div></div> */}
               <img
-<<<<<<< HEAD
-                src={`http://localhost:5000/images/tours/${data.imageCover}`}
-=======
+
                 src={`https://bootcamp-wine.vercel.app/images/tours/${data.imageCover}`}
->>>>>>> 7278900 (fro)
+
                 alt="bhushan"
                 className="w-full h-[600px] z-10 absolute "
               ></img>
@@ -172,30 +165,24 @@ export default function TourOverView() {
             </div>
             <div className="overview-3">
               <img
-<<<<<<< HEAD
-                src={`http://localhost:5000/images/tours/${data.images[0]}`}
-=======
+
                 src={`https://bootcamp-wine.vercel.app/images/tours/${data.images[0]}`}
->>>>>>> 7278900 (fro)
+
                 alt="bhushan "
                 className="w-[33%] h-full"
               ></img>
               {/* <img src={`http://localhost:4000/images/tours/${data.images[0]}`} alt="bhushan "className="w-[33%]"></img> */}
               <img
-<<<<<<< HEAD
-                src={`http://localhost:5000/images/tours/${data.images[1]}`}
-=======
+
                 src={`https://bootcamp-wine.vercel.app/images/tours/${data.images[1]}`}
->>>>>>> 7278900 (fro)
+
                 alt="bhus"
                 className="w-[33%]"
               ></img>
               <img
-<<<<<<< HEAD
-                src={`http://localhost:5000/images/tours/${data.images[2]}`}
-=======
+
                 src={`https://bootcamp-wine.vercel.app/images/tours/${data.images[2]}`}
->>>>>>> 7278900 (fro)
+
                 alt="bhushan"
                 className="w-[33%]"
               ></img>

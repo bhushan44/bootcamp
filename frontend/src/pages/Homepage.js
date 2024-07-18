@@ -18,11 +18,10 @@ export default function Homepage() {
   const [data, setData] = useState([]);
   useEffect(() => {
     async function getTours() {
-<<<<<<< HEAD
-      let result = await fetch("http://localhost:5000/api/v1/tours");
-=======
+
       let result = await fetch("https://bootcamp-wine.vercel.app/api/v1/tours");
->>>>>>> 7278900 (fro)
+      console.log("")
+
       result = await result.json();
       setData(result.data);
       console.log(result.data);
@@ -38,11 +37,9 @@ export default function Homepage() {
           return (
             <>
               <div className="bg-white h-auto w-[300px] flex flex-col gap-1  m-10 ">
-<<<<<<< HEAD
-                <img src={`http://localhost:5000/images/tours/${el.imageCover}`} alt="bhusahn" className="w-[300px] h-52"></img>
-=======
+
                 <img src={`https://bootcamp-wine.vercel.app/images/tours/${el.imageCover}`} alt="bhusahn" className="w-[300px] h-52"></img>
->>>>>>> 7278900 (fro)
+
                 <div className="flex flex-col p-5">
                   <h1 className="text-lg font-bold">
                     {el.difficulty} {el.duration}day tour

@@ -11,11 +11,10 @@ export default function Signup() {
   const navigation = useNavigate();
   async function handlesubmit() {
     try {
-<<<<<<< HEAD
-      const response = await fetch("http://localhost:5000/api/v1/users", {
-=======
+
+
       const response = await fetch("https://bootcamp-wine.vercel.app/api/v1/users", {
->>>>>>> 7278900 (fro)
+
         method: "POST", // or 'PUT'
         headers: {
           "Content-Type": "application/json",

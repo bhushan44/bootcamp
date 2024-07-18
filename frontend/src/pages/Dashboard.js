@@ -15,11 +15,9 @@ export default function Dashboard() {
     useEffect(() => {
         const fetchUserData = async () => {
             try {
-<<<<<<< HEAD
-                const response = await fetch('http://localhost:5000/api/v1/user', {
-=======
+
                 const response = await fetch('https://bootcamp-wine.vercel.app/api/v1/user', {
->>>>>>> 7278900 (fro)
+
                     method: 'GET',
                     headers: {
                         'Authorization': `Bearer ${sessionStorage.getItem("token")}`
@@ -62,11 +60,9 @@ export default function Dashboard() {
         }
 
         try {
-<<<<<<< HEAD
-            const response = await fetch('http://localhost:5000/api/v1/updateuser', {
-=======
+
             const response = await fetch('https://bootcamp-wine.vercel.app/api/v1/updateuser', {
->>>>>>> 7278900 (fro)
+
                 method: 'PATCH',
                 body: formData,
                 headers: {
@@ -104,11 +100,9 @@ export default function Dashboard() {
                         <p className='text-3xl text-green-400'>YOUR ACCOUNT SETTINGS</p>
                         {photoURL && (
                             <div className='mb-4'>
-<<<<<<< HEAD
-                                <img src={`http://localhost:5000/images/users/${photoURL}`} alt="Profile" className='w-32 h-32 rounded-full object-cover' />
-=======
+
                                 <img src={`https://bootcamp-wine.vercel.app/images/users/${photoURL}`} alt="Profile" className='w-32 h-32 rounded-full object-cover' />
->>>>>>> 7278900 (fro)
+
                             </div>
                         )}
                         <div className='flex flex-col'>

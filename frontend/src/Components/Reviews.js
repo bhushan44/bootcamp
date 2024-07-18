@@ -8,11 +8,9 @@ export default function Reviews({ id }) {
 
   useEffect(() => {
     async function getReviews() {
-<<<<<<< HEAD
-      const result = await fetch(`http://localhost:5000/api/v1/reviews/${id}`);
-=======
+
       const result = await fetch(`https://bootcamp-wine.vercel.app/api/v1/reviews/${id}`);
->>>>>>> 7278900 (fro)
+
       const res = await result.json();
       setReviewData(res.data);
       console.log(res,"re");
