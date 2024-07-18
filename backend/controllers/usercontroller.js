@@ -110,7 +110,7 @@ const handleSubmit = async (event) => {
     console.error('Error:', error);
   }
 };
-Choose the appropriate approach based on the expected data format and ensure the server is configured to handle the request correctly. If issues persist, reviewing the server logs and configuration will be crucial in identifying the root cause.
+
 
 
 
