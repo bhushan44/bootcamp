@@ -4,6 +4,7 @@ import UpdatePassword from '../Components/Updatepassword';
 import { IoSettingsOutline } from "react-icons/io5";
 import { FaRegCalendarCheck } from "react-icons/fa";
 import { FaRegStar } from "react-icons/fa";
+import { json } from 'express';
 
 export default function Dashboard() {
     const [name, setName] = useState("");
@@ -64,10 +65,12 @@ export default function Dashboard() {
             const response = await fetch('https://bootcamp-wine.vercel.app/api/v1/updateuser', {
 
                 method: 'PATCH',
-                body: formData,
+                // body: formData,
                 headers: {
-                      'Authorization': `Bearer ${sessionStorage.getItem("token")}`
-                }
+                      'Authorization': `Bearer ${sessionStorage.getItem("token")}`,
+                      
+                },
+                body:JSON.stringify(formData)
             });
 
             // if (!response.ok) {
