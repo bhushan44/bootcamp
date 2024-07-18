@@ -80,8 +80,10 @@ export default function Dashboard() {
 
             const result = await response.json();
             console.log('Success:', result);
-            if (result.photoURL) {
-                setPhotoURL(result.photoURL); // Update photo URL if returned from backend
+            if (result) {
+                setName(result.data.name);
+                setEmail(result.data.email);
+                setPhotoURL(result.data.photo) // Update photo URL if returned from backend
             }
         } catch (error) {
             console.log('Error:', error);
