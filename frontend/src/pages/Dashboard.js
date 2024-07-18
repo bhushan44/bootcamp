@@ -45,8 +45,10 @@ export default function Dashboard() {
     const handleFileChange = (e) => {
         const file = e.target.files[0];
         if (file) {
+            
             setPhoto(file);
             setSelectedFileName(file.name);
+            console.log(photo)
         }
     };
 
@@ -77,6 +79,7 @@ export default function Dashboard() {
             // if (!response.ok) {
             //     throw new Error('Network response was not ok');
             // }
+            
 
             const result = await response.json();
             console.log('Success:', result);
