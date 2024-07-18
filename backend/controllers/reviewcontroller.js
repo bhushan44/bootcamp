@@ -84,19 +84,17 @@ async function createOrUpdateReview(req,res) {
       }
     );
     console.log("Review created or updated:", reviewres);
-<<<<<<< HEAD
-  } catch (error) {
-    console.error("Error creating or updating review:", error);
-=======
     res.json({
       status:"succesfuuly crated review"
     })
-  } catch (error) {
+
+  } 
+    
+   catch (error) {
     console.error("Error creating or updating review:", error);
     res.json({
-      status:e.message
-    })
->>>>>>> 44c5bfc (frontend)
+      status:e.message})
+
   }
 }
 
