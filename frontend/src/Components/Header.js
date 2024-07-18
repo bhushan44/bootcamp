@@ -9,11 +9,10 @@ export default function Header() {
   useEffect(() => {
     const fetchUserData = async () => {
         try {
-<<<<<<< HEAD
-            const response = await fetch('http://localhost:5000/api/v1/user', {
-=======
+
+
             const response = await fetch('https://bootcamp-wine.vercel.app/api/v1/user', {
->>>>>>> 7278900 (fro)
+
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${sessionStorage.getItem("token")}`
@@ -22,10 +21,6 @@ export default function Header() {
 
             if (!response.ok) {
                 throw new Error('Network response was not ok');
-<<<<<<< HEAD
-=======
-
->>>>>>> 7278900 (fro)
             }
 
             const userData = await response.json();
@@ -56,11 +51,8 @@ export default function Header() {
           }}>
             logout 
           </button>
-<<<<<<< HEAD
-        <Link to='/dashboard'><img src={`http://localhost:5000/images/users/${data?.photo}`} alt="bhu" className="h-[50px] w-[50px] rounded-[50%]"></img></Link>
-=======
+
         <Link to='/dashboard'><img src={`https://bootcamp-wine.vercel.app/images/users/${data?.photo}`} alt="bhu" className="h-[50px] w-[50px] rounded-[50%]"></img></Link>
->>>>>>> 7278900 (fro)
           <p>{data?.name}</p>
  
           </>}
