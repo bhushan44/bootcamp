@@ -79,74 +79,6 @@ async function getuser(
     data:userdetails
   })
 }
-const handleSubmit = async (event) => {
-  event.preventDefault();
-
-  const formData = {
-    id: userId,
-    name: userName,
-    email: userEmail,
-    // Add other fields as necessary
-  };
-
-  try {
-    const response = await fetch('https://bootcamp-wine.vercel.app/api/v1/updateuser', {
-      method: 'PATCH',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${sessionStorage.getItem("token")}`,
-      },
-      body: JSON.stringify(formData),
-    });
-
-    if (!response.ok) {
-      const errorText = await response.text();
-      throw new Error(`Network response was not ok: ${errorText}`);
-    }
-
-    const data = await response.json();
-    console.log('Success:', data);
-  } catch (error) {
-    console.error('Error:', error);
-  }
-};
-
-
-
-
-
-
-async function updateme(req, res) {
-  if (req.body.password || req.body.conformPassword) {
-    return res.json({
-      message: "this route is not for updatepassword please use suitable route",
-    });
-  }
-  const filterBody = filterObj(req.body, "name", "email");
-  // filterBody.photo=req.file.fi
-  // console.log(req.file,"fi")
-  if(req.file){
-    filterBody.photo=req.file.filename
-  }
-  try{
-    const data = await user.findByIdAndUpdate(req.user.id, filterBody, {
-      new: true,
-      runValidators: true,
-    });
-    res.json({
-      status: "success",
-      data,
-    });
-
-  }catch(e){
-    React.json({
-      status:"fail",
-      message:e.message
-    })
-  }
-  
-}
-
 const updateme = async (req, res) => {
   if (req.body.password || req.body.conformPassword) {
     return res.status(400).json({
@@ -185,6 +117,7 @@ const updateme = async (req, res) => {
     });
   }
 };
+
 async function deleteme(req, res) {
   await user.findByIdAndUpdate(req.user.id, { active: false });
   res.json({
