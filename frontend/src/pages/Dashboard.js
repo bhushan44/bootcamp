@@ -4,7 +4,7 @@ import UpdatePassword from '../Components/Updatepassword';
 import { IoSettingsOutline } from "react-icons/io5";
 import { FaRegCalendarCheck } from "react-icons/fa";
 import { FaRegStar } from "react-icons/fa";
-import { json } from 'express';
+// import { json } from 'express';
 
 export default function Dashboard() {
     const [name, setName] = useState("");
@@ -67,6 +67,7 @@ export default function Dashboard() {
                 method: 'PATCH',
                 // body: formData,
                 headers: {
+                    'Content-Type': 'application/json',
                       'Authorization': `Bearer ${sessionStorage.getItem("token")}`,
                       
                 },
