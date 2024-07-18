@@ -91,14 +91,23 @@ async function updateme(req, res) {
   if(req.file){
     filterBody.photo=req.file.filename
   }
-  const data = await user.findByIdAndUpdate(req.user.id, filterBody, {
-    new: true,
-    runValidators: true,
-  });
-  res.json({
-    status: "success",
-    data,
-  });
+  try{
+    const data = await user.findByIdAndUpdate(req.user.id, filterBody, {
+      new: true,
+      runValidators: true,
+    });
+    res.json({
+      status: "success",
+      data,
+    });
+
+  }catch(e){
+    React.json({
+      status:"fail",
+      message:e.message
+    })
+  }
+  
 }
 async function deleteme(req, res) {
   await user.findByIdAndUpdate(req.user.id, { active: false });
