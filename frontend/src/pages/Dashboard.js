@@ -80,7 +80,7 @@ export default function Dashboard() {
                 setPhotoURL(result.photoURL); // Update photo URL if returned from backend
             }
         } catch (error) {
-            console.error('Error:', error);
+            console.log('Error:', error);
         }
     };
 
