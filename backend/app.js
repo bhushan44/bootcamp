@@ -35,12 +35,12 @@ const { sendotp } = require("./controllers/otpcontroller");
 const{createBooking, getBookings,getCheckOutSession}=require("./controllers/bookingcontroller")
 dotenv.config({ path: "./config.env" });
 app.use(express.json());
-const corsOptions = {
-  origin: 'https://tripbhushan.vercel.app',
-  optionsSuccessStatus: 200
-};
+// const corsOptions = {
+//   origin: 'https://tripbhushan.vercel.app',
+//   optionsSuccessStatus: 200
+// };
 
-app.use(cors(corsOptions));
+app.use(cors());
 app.use("/images",express.static(path.join(__dirname,"/public/images")))
 app.listen(5000, () => {
   console.log("app listening to port 5000");

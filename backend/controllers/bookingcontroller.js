@@ -65,8 +65,8 @@ const getCheckOutSession = async (req, res) => {
         const session = await stripe.checkout.sessions.create({
             payment_method_types: ['card'],
             mode: 'payment',
-            success_url: `http://localhost:3000/bookings`,
-            cancel_url: `http://localhost:3000/homepage`,
+            success_url: `https://tripbhushan.vercel.app/bookings`,
+            cancel_url: `https://tripbhushan.vercel.app/homepage`,
             customer_email: req.user.email,
             client_reference_id: tourId,
             line_items: [
