@@ -110,7 +110,7 @@ export default function Dashboard() {
                         {photoURL && (
                             <div className='mb-4'>
 
-                                <img src={`https://bootcamp-wine.vercel.app/images/users/${photoURL}`} alt="Profile" className='w-32 h-32 rounded-full object-cover' />
+                                <img src={photoURL} alt="Profile" className='w-32 h-32 rounded-full object-cover' />
 
                             </div>
                         )}
