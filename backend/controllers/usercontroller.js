@@ -89,7 +89,7 @@ const updateme = async (req, res) => {
   const filterBody = filterObj(req.body, "name", "email");
 
   if (req.file) {
-    filterBody.photo = req.file.filename;
+    filterBody.photo = req.file.location;
   }
 
   try {
