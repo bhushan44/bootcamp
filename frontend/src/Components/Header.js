@@ -52,7 +52,7 @@ export default function Header() {
             logout 
           </button>
 
-        <Link to='/dashboard'><img src={`https://bootcamp-wine.vercel.app/images/users/${data?.photo}`} alt="bhu" className="h-[50px] w-[50px] rounded-[50%]"></img></Link>
+        <Link to='/dashboard'><img src={`https://user-profile-s3.s3.us-east-1.amazonaws.com/image-1722099414035.jpeg`} alt="bhu" className="h-[50px] w-[50px] rounded-[50%]"></img></Link>
           <p>{data?.name}</p>
  
           </>}
